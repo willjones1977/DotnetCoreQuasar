@@ -9,8 +9,8 @@ I am able to hit API endpoints in the browser like so:
 
 
 
-The Quasar project works with quasar dev after setting up an API proxy
 
-### To run the dev server and the API backend side-by-side see
+
+### To run the dev server (quasar dev) and the API backend side-by-side see
 
 https://quasar-framework.org/guide/app-api-proxying.html
