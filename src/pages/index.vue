@@ -3,7 +3,10 @@
     <img alt="Quasar logo" src="~assets/quasar-logo-full.svg">
 
     <div class="row col-12 justify-center">
-      {{ textFromApi }}
+        {{ ApiIndexText }}
+    </div>
+    <div class="row col-12 justify-center">
+        {{ APITestText }}
     </div>
   </q-page>
 </template>
@@ -16,13 +19,17 @@ export default {
   name: 'PageIndex',
   data () {
     return {
-      textFromApi: null
+      ApiIndexText: null,
+      APITestText: null
     }
   },
 
   async created () {
-    var response = await this.$axios.get('/HelloWorld')
-    this.textFromApi = response.data.text
+    // Hit the /HelloWorld/Index endpoint
+    var indexResponse = await this.$axios.get('/HelloWorld')
+    this.ApiIndexText = indexResponse.data
+    var testResponse = await this.$axios.get('/HelloWorld/Test')
+    this.APITestText = testResponse.data
   }
 }
 </script>

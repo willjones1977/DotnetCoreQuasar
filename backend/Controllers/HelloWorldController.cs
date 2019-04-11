@@ -11,10 +11,16 @@ namespace backend.Controllers
         public HelloWorldController()
         {}
 
-        [HttpGet]
-        public HelloWorld GetAll()
+        [HttpGet("Test")]
+        public IActionResult Test()
         {
-            return new HelloWorld{ text = "Hello world from dotnet core api!"};
+            return Content("Response from the Test() method in the HelloWorldController");
         }
+        
+        public IActionResult Index()
+        {
+            return Content("Response from the Index() method in the HelloWorldController");
+        }
+
     }
 }
