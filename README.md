@@ -1,6 +1,9 @@
 # DotnetCoreQuasar
 Starter template for dot net core quasar
-This shows some promise for me
+This shows some promise for me.
 
+The ASP.net project builds with no errors.
 I am able to hit API endpoints in the browser like so:
 [localhost:port/api/HelloWorld/GetAll](localhost:port/api/HelloWorld/GetAll)
+
+I have not attempted to build the Quasar project.
